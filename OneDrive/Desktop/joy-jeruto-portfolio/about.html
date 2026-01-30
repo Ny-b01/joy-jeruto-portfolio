@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Joy Jeruto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    <style>
+        .about-container {
+            display: flex;
+            gap: 3rem;
+            align-items: start;
+            margin-top: 2rem;
+        }
+        
+        .about-image {
+            flex: 1;
+            max-width: 400px;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px var(--shadow-color);
+        }
+        
+        .about-content {
+            flex: 2;
+        }
+        
+        .fun-facts {
+            margin-top: 2rem;
+        }
+        
+        .hobbies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .hobby-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 3px 10px var(--shadow-color);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .hobby-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px var(--shadow-color);
+            border-color: var(--primary-color);
+        }
+        
+        .hobby-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .hobby-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .hobby-card p {
+            font-size: 0.9rem;
+            color: var(--text-color);
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .about-container {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                max-width: 100%;
+            }
+            
+            .hobbies-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Joy Jeruto</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+            <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="fade-in">About Me</h1>
+        
+        <div class="about-container fade-in">
+            <div class="about-image">
+                <img src="assets/images/profile.jpg" alt="Joy Jeruto">
+            </div>
+            
+            <div class="about-content">
+                <h2>Who I Am</h2>
+                <p>Hello! I'm Joy Jeruto, a passionate Full-Stack Web Developer based in Kenya. With a strong foundation in both front-end and back-end development, I specialize in creating responsive and user-friendly web applications that solve real-world problems.</p>
+                
+                <h2>Education</h2>
+                <p>Bachelor of Science in Computer security and forensics<br>
+                Kabarak University<br>
+                2023 - 2027</p>
+                
+                <h2>Mission Statement</h2>
+                <p>My mission is to leverage technology to create innovative solutions that make a positive impact on people's lives. I believe in writing clean, maintainable code and staying current with the latest web development trends and best practices.</p>
+                
+                <div class="fun-facts">
+                    <h2>Fun Facts & Hobbies</h2>
+                    <div class="hobbies-grid">
+                        <div class="hobby-card">
+                            <span class="hobby-icon">📚</span>
+                            <h3>Book Lover</h3>
+                            <p>Currently reading "Clean Code" by Robert C. Martin</p>
+                        </div>
+                        <div class="hobby-card">
+                            <span class="hobby-icon">🎨</span>
+                            <h3>Digital Artist</h3>
+                            <p>Amateur digital artist creating visual designs</p>
+                        </div>
+                        <div class="hobby-card">
+                            <span class="hobby-icon">🌱</span>
+                            <h3>Plant Enthusiast</h3>
+                            <p>Growing collection of succulents and indoor plants</p>
+                        </div>
+                        <div class="hobby-card">
+                            <span class="hobby-icon">✈️</span>
+                            <h3>Traveler</h3>
+                            <p>Love exploring cultures and experiencing new places</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/Ny-b01" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:jerutojoy004@gmail.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+        <p>&copy; <span id="year"></span> Joy Jeruto. All rights reserved.</p>
+    </footer>
+
+    <a href="#" class="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

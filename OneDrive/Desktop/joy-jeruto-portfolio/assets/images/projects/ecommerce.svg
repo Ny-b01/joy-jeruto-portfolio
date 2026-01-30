@@ -1,0 +1,17 @@
+<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6B9BD1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A8D5F7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="250" fill="url(#grad1)"/>
+  <rect x="50" y="40" width="100" height="80" fill="#ffffff" opacity="0.9" rx="5"/>
+  <rect x="170" y="40" width="100" height="80" fill="#ffffff" opacity="0.9" rx="5"/>
+  <rect x="290" y="40" width="60" height="80" fill="#ffffff" opacity="0.9" rx="5"/>
+  <circle cx="100" cy="90" r="25" fill="#6B9BD1"/>
+  <circle cx="220" cy="90" r="25" fill="#6B9BD1"/>
+  <circle cx="320" cy="90" r="25" fill="#6B9BD1"/>
+  <text x="200" y="170" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle" font-family="Arial">E-Commerce</text>
+  <text x="200" y="200" font-size="14" fill="#ffffff" text-anchor="middle" font-family="Arial">Shopping Cart</text>
+</svg>

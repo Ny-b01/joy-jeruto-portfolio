@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Joy Jeruto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    <style>
+        .resume-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2.5rem;
+            background: linear-gradient(135deg, var(--card-bg) 0%, var(--card-bg) 100%);
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            border-left: 5px solid var(--primary-color);
+        }
+        
+        .resume-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--primary-color);
+            position: relative;
+        }
+        
+        .resume-header::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--secondary-color);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .resume-header h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .resume-header > p:first-of-type {
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .resume-header p:last-of-type {
+            font-size: 0.95rem;
+            color: var(--text-color);
+        }
+        
+        .resume-header a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .resume-header a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+        
+        .resume-section {
+            margin-bottom: 2.5rem;
+        }
+        
+        .resume-section h3 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid var(--accent-color);
+            position: relative;
+            padding-left: 1rem;
+        }
+        
+        .resume-section h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background: var(--primary-color);
+            border-radius: 50%;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 2.5rem;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.2rem;
+            padding-left: 1.5rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.35rem;
+            top: 0.5rem;
+            width: 14px;
+            height: 14px;
+            background: var(--card-bg);
+            border: 3px solid var(--primary-color);
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+        
+        .timeline-item:hover::before {
+            width: 18px;
+            height: 18px;
+            left: -2.65rem;
+            top: 0.25rem;
+            background: var(--primary-color);
+        }
+        
+        .timeline-date {
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+        }
+        
+        .timeline-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.4rem;
+            font-size: 1.1rem;
+        }
+        
+        .timeline-item > p {
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .timeline-item ul {
+            margin: 0.8rem 0 0 1.2rem;
+            padding-left: 0;
+        }
+        
+        .timeline-item li {
+            color: var(--text-color);
+            margin-bottom: 0.4rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1.2rem;
+        }
+        
+        .skill-tag {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            box-shadow: 0 3px 10px rgba(107, 155, 209, 0.2);
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .skill-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(107, 155, 209, 0.3);
+        }
+        
+        .download-resume {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(107, 155, 209, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .download-resume:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(107, 155, 209, 0.4);
+        }
+        
+        .download-resume i {
+            margin-right: 0.5rem;
+        }
+        
+        @media print {
+            * {
+                background: white !important;
+                color: black !important;
+            }
+            
+            body {
+                background: white;
+                color: black;
+            }
+            
+            .resume-container {
+                box-shadow: none !important;
+                border: none !important;
+                padding: 20px;
+                background: white !important;
+                max-width: 100%;
+                margin: 0;
+                border-radius: 0;
+            }
+            
+            header, footer, .scroll-top, .download-resume, .container > h1, nav, .theme-toggle, .mobile-menu-btn {
+                display: none !important;
+            }
+            
+            .resume-header {
+                margin-bottom: 1.5rem;
+                padding-bottom: 1rem;
+                border-bottom: 2px solid black;
+            }
+            
+            .resume-header::after {
+                display: none !important;
+            }
+            
+            .resume-header h2 {
+                color: black !important;
+                font-size: 1.8rem;
+            }
+            
+            .resume-header > p {
+                color: black !important;
+            }
+            
+            .resume-section {
+                margin-bottom: 1.5rem;
+                page-break-inside: avoid;
+            }
+            
+            .resume-section h3 {
+                color: black !important;
+                border-bottom: 1px solid black !important;
+                padding-left: 0;
+            }
+            
+            .resume-section h3::before {
+                display: none !important;
+            }
+            
+            .timeline-item {
+                page-break-inside: avoid;
+            }
+            
+            .timeline-date {
+                color: black !important;
+                font-weight: bold;
+            }
+            
+            .timeline-item h4 {
+                color: black !important;
+            }
+            
+            .timeline-item > p,
+            .timeline-item li {
+                color: black !important;
+            }
+            
+            .skills-list {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            
+            .skill-tag {
+                background: #6B9BD1 !important;
+                color: white !important;
+                border: 1px solid #6B9BD1 !important;
+                box-shadow: none !important;
+            }
+            
+            a {
+                color: black !important;
+                text-decoration: underline;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Joy Jeruto</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+            <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="fade-in">Resume</h1>
+        
+        <div class="resume-container fade-in">
+            <div class="resume-header">
+                <h2>Joy Jeruto</h2>
+                <p>Full Stack Web Developer</p>
+                <p>
+                    <a href="mailto:jerutojoy004@gmail.com">jerutojoy004@gmail.com</a> |
+                    <a href="tel:+254748198018">+254 748 198 018</a>
+                </p>
+            </div>
+
+            <div class="resume-section">
+                <h3>Education</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023-2027</div>
+                        <h4>Bachelor of Science in Computer Security and Forensics</h4>
+                        <p>Kabarak University</p>
+                
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023</div>
+                        <h4>Web Development Bootcamp</h4>
+                    </p>
+                        <p>Full Stack Web Development Certification</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resume-section">
+                <h3>Work Experience</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023 - Present</div>
+                        <h4>Full Stack Developer</h4>
+        
+                        <ul>
+                            <li>Developed and maintained client websites using modern web technologies</li>
+                            <li>Implemented responsive designs and improved site performance</li>
+                            <li>Collaborated with cross-functional teams on various projects</li>
+                        </ul>
+                    </div>
+                    
+                
+                        <ul>
+                            <li>Assisted in developing user interfaces for web applications</li>
+                            <li>Participated in code reviews and implemented feedback</li>
+                            <li>Created technical documentation for projects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resume-section">
+                <h3>Technical Skills</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">PHP</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">MongoDB</span>
+                </div>
+            </div>
+
+            <div class="resume-section">
+                <h3>Certifications</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023</div>
+                        <h4>AWS Certified Developer Associate</h4>
+                        <p>Amazon Web Services</p>
+                    </div>
+                    
+                    
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="download-resume" download>
+                <i class="fas fa-download"></i> Download Resume (PDF)
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/Ny-b01" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:jerutojoy004@gmail.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+        <p>&copy; <span id="year"></span> Joy Jeruto. All rights reserved.</p>
+    </footer>
+
+    <a href="#" class="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

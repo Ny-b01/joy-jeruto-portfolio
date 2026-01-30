@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Joy Jeruto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    <style>
+        .skills-section {
+            margin: 2rem 0;
+        }
+        
+        .skill-category {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 3px 10px var(--shadow-color);
+        }
+        
+        .skill-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        
+        .skill-level {
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+        
+        .skill-description {
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            color: var(--text-color);
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Joy Jeruto</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+            <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="fade-in">My Skills</h1>
+        
+        <div class="skills-section fade-in">
+            <div class="skill-category">
+                <h2>Frontend Development</h2>
+                
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span>HTML5</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="95"></div>
+                    </div>
+                    <p class="skill-description">Semantic markup, accessibility, and modern HTML5 features</p>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span>CSS3</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="90"></div>
+                    </div>
+                    <p class="skill-description">Responsive design, animations, and modern layouts</p>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span>JavaScript</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="85"></div>
+                    </div>
+                    <p class="skill-description">ES6+, DOM manipulation, and async programming</p>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h2>Backend Development</h2>
+                
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span>PHP</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="80"></div>
+                    </div>
+                    <p class="skill-description">OOP, MVC pattern, and API development</p>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span>Python</span>
+                        <span class="skill-level">Good</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="75"></div>
+                    </div>
+                    <p class="skill-description">Django, Flask, and data processing</p>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span>MySQL</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="80"></div>
+                    </div>
+                    <p class="skill-description">Database design, optimization, and management</p>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h2>Development Tools</h2>
+                
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span>Git</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="90"></div>
+                    </div>
+                    <p class="skill-description">Version control, branching strategies, and collaboration</p>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span>VS Code</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="95"></div>
+                    </div>
+                    <p class="skill-description">Extensions, debugging, and customization</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:joy.jeruto@example.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+        <p>&copy; <span id="year"></span> Joy Jeruto. All rights reserved.</p>
+    </footer>
+
+    <a href="#" class="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
